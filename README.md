@@ -295,12 +295,3 @@ ha-web-infrastructure-azure/
 
 Built by Maurrin Carter | @maxmagnac (https://github.com/maxmagnac) | Microsoft Azure | 2026
 `
-
-That's your full GitHub README! 🔥💪🏾
-
-Next steps to publish:
-1. Create a new GitHub repo named ha-web-infrastructure-azure
-2. Paste this as your README.md`
-3. Upload your screenshots organized into phase folders matching the structure above
-
-Ready to move to Project 2 - Terraform? 🚀
