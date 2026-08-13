@@ -8,19 +8,25 @@ A resilient, multi-tier web infrastructure deployed on Microsoft Azure featuring
 Configured the foundational networking environment, including the Virtual Network (VNet), public and private subnets, and Network Security Groups to control inbound and outbound traffic securely.
 
 * **VNet Overview:**
-  ![VNet Overview](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase1/hawebvnet_overview.png)
+  <img src="screenshots/phase1/hawebvnet_overview.png" alt="VNet Overview" width="700">
+
 * **Subnets (Public & Private):**
-  ![Subnets Private and Public](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase1/hawebvnet_subnets_priv_pub.png)
+  <img src="screenshots/phase1/hawebvnet_subnets_priv_pub.png" alt="Subnets Private and Public" width="700">
+
 * **NSG Overview:**
-  ![NSGs](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase1/hawebNSGs.png)
+  <img src="screenshots/phase1/hawebNSGs.png" alt="NSGs" width="700">
+
 * **Public NSG Inbound Rules:**
-  ![Public NSG Inbound Rules](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase1/hawebNSGs_public-nsg%20inbound%20rules.png)
+  <img src="screenshots/phase1/hawebNSGs_public-nsg inbound rules.png" alt="Public NSG Inbound Rules" width="700">
+
 * **Private NSG Inbound Rules:**
-  ![Private NSG Inbound Rules](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase1/haweb_private-nsg%20inbound%20rules.png)
+  <img src="screenshots/phase1/haweb_private-nsg inbound rules.png" alt="Private NSG Inbound Rules" width="700">
+
 * **Private NSG Subnets:**
-  ![Private NSG Subnets](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase1/haweb_private-nsg%20subnets.png)
+  <img src="screenshots/phase1/haweb_private-nsg subnets.png" alt="Private NSG Subnets" width="700">
+
 * **Public NSG Subnets:**
-  ![Public NSG Subnets](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase1/haweb_public-nsg%20subnets.png)
+  <img src="screenshots/phase1/haweb_public-nsg subnets.png" alt="Public NSG Subnets" width="700">
 
 ---
 
@@ -28,37 +34,52 @@ Configured the foundational networking environment, including the Virtual Networ
 Provisioned web and database virtual machines across the environment, configured their instance settings, and installed the Nginx web server on the web nodes.
 
 * **Both VMs Overview:**
-  ![Both VMs Overview](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_Both%20VMs%20overview.png)
+  <img src="screenshots/phase2/haweb_Both VMs overview.png" alt="Both VMs Overview" width="700">
+
 * **Both VMs Responding Test:**
-  ![Both VMs Responding Test](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_Both%20VMs_responding_test.png)
+  <img src="screenshots/phase2/haweb_Both VMs_responding_test.png" alt="Both VMs Responding Test" width="700">
+
 * **VM1 and VM2 Side-by-Side:**
-  ![VM1 and VM2](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_vm1%20and%20vm2.png)
+  <img src="screenshots/phase2/haweb_vm1 and vm2.png" alt="VM1 and VM2" width="700">
+
 * **VM1 Settings Part 1:**
-  ![VM1 Settings 1](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_vm1_settings1.png)
+  <img src="screenshots/phase2/haweb_vm1_settings1.png" alt="VM1 Settings 1" width="700">
+
 * **VM1 Settings Part 2:**
-  ![VM1 Settings 2](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_vm1_settings2.png)
+  <img src="screenshots/phase2/haweb_vm1_settings2.png" alt="VM1 Settings 2" width="700">
+
 * **VM2 Settings Part 1:**
-  ![VM2 Settings 1](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_vm2_settings1.png)
+  <img src="screenshots/phase2/haweb_vm2_settings1.png" alt="VM2 Settings 1" width="700">
+
 * **VM2 Settings Part 2:**
-  ![VM2 Settings 2](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_vm2_settings2.png)
+  <img src="screenshots/phase2/haweb_vm2_settings2.png" alt="VM2 Settings 2" width="700">
+
 * **Database VM (vm-db-01):**
-  ![VM DB 01](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_vm-db-01.png)
+  <img src="screenshots/phase2/haweb_vm-db-01.png" alt="VM DB 01" width="700">
+
 * **Database VM 1 Settings Part 1:**
-  ![VM DB 01 Settings 1](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_vm-db-01_settings1.png)
+  <img src="screenshots/phase2/haweb_vm-db-01_settings1.png" alt="VM DB 01 Settings 1" width="700">
+
 * **Database VM 1 Settings Part 2:**
-  ![VM DB 01 Settings 2](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_vm-db-01_settings2.png)
+  <img src="screenshots/phase2/haweb_vm-db-01_settings2.png" alt="VM DB 01 Settings 2" width="700">
+
 * **Database VM 2 Settings Part 1:**
-  ![VM DB 02 Settings 1](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_vm-db-02_settings1.png)
+  <img src="screenshots/phase2/haweb_vm-db-02_settings1.png" alt="VM DB 02 Settings 1" width="700">
+
 * **Database VM 2 Settings Part 2:**
-  ![VM DB 02 Settings 2](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_vm-db-02_settings2.png)
+  <img src="screenshots/phase2/haweb_vm-db-02_settings2.png" alt="VM DB 02 Settings 2" width="700">
+
 * **Nginx Install Output (vm-web-01):**
-  ![Nginx Install Output VM Web 01](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_Nginx%20install_output_%20vm-web-01.png)
+  <img src="screenshots/phase2/haweb_Nginx install_output_ vm-web-01.png" alt="Nginx Install Output VM Web 01" width="700">
+
 * **Nginx Install Output (vm-web-02):**
-  ![Nginx Install Output VM Web 02](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_Nginx_install_output_vm-web-02.png)
+  <img src="screenshots/phase2/haweb_Nginx_install_output_vm-web-02.png" alt="Nginx Install Output VM Web 02" width="700">
+
 * **Nginx Status (vm-web-01):**
-  ![Nginx Status VM Web 01](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_Nginx_status_vm-web-01.png)
+  <img src="screenshots/phase2/haweb_Nginx_status_vm-web-01.png" alt="Nginx Status VM Web 01" width="700">
+
 * **Nginx Status (vm-web-02):**
-  ![Nginx Status VM Web 02](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase2/haweb_Nginx_status_vm-web-02.png)
+  <img src="screenshots/phase2/haweb_Nginx_status_vm-web-02.png" alt="Nginx Status VM Web 02" width="700">
 
 ---
 
@@ -66,19 +87,25 @@ Provisioned web and database virtual machines across the environment, configured
 Implemented an Azure Load Balancer to distribute incoming traffic evenly across backend web virtual machines, configuring health probes and backend pool associations.
 
 * **Load Balancer Overview:**
-  ![LB Overview](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase3/haweb_lb_overview.png)
+  <img src="screenshots/phase3/haweb_lb_overview.png" alt="LB Overview" width="700">
+
 * **Load Balancer Deployment Success:**
-  ![LB Deployment Success](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase3/haweb_lb_deploysuccess.png)
+  <img src="screenshots/phase3/haweb_lb_deploysuccess.png" alt="LB Deployment Success" width="700">
+
 * **Load Balancer Settings Part 1:**
-  ![LB Settings 1](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase3/haweb_lb_settings1.png)
+  <img src="screenshots/phase3/haweb_lb_settings1.png" alt="LB Settings 1" width="700">
+
 * **Load Balancer Settings Part 2:**
-  ![LB Settings 2](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase3/haweb_lb_settings2.png)
+  <img src="screenshots/phase3/haweb_lb_settings2.png" alt="LB Settings 2" width="700">
+
 * **Load Balancer VM Health:**
-  ![LB VM Health](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase3/haweb_lb_vm_health.png)
+  <img src="screenshots/phase3/haweb_lb_vm_health.png" alt="LB VM Health" width="700">
+
 * **Load Balancer Test Success (vm-web-01):**
-  ![LB VM Web 01 Success](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase3/haweb_lb-vm-web-01-success.png)
+  <img src="screenshots/phase3/haweb_lb-vm-web-01-success.png" alt="LB VM Web 01 Success" width="700">
+
 * **Load Balancer Test Success (vm-web-02):**
-  ![LB VM Web 02 Success](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase3/haweb_lb-vm-web-02-success.png)
+  <img src="screenshots/phase3/haweb_lb-vm-web-02-success.png" alt="LB VM Web 02 Success" width="700">
 
 ---
 
@@ -86,13 +113,16 @@ Implemented an Azure Load Balancer to distribute incoming traffic evenly across 
 Configured an Azure NAT Gateway and associated it with private subnets to enable secure outbound internet connectivity for resources without public IP addresses.
 
 * **NAT Gateway Overview:**
-  ![NAT Gateway Overview](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase4/haweb_natgateway_overview.png)
+  <img src="screenshots/phase4/haweb_natgateway_overview.png" alt="NAT Gateway Overview" width="700">
+
 * **NAT Gateway Subnet Association:**
-  ![NAT Gateway Subnet Association](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase4/haweb_natgateway_subnet_association.png)
+  <img src="screenshots/phase4/haweb_natgateway_subnet_association.png" alt="NAT Gateway Subnet Association" width="700">
+
 * **NAT Gateway Subnets Associated:**
-  ![NAT Gateway Subnets Associated](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase4/haweb_natgateway_subnets_associated.png)
+  <img src="screenshots/phase4/haweb_natgateway_subnets_associated.png" alt="NAT Gateway Subnets Associated" width="700">
+
 * **VNet Subnets Private & Public Reference:**
-  ![VNet Subnets Private and Public](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase4/hawebvnet_subnets_priv_pub.png)
+  <img src="screenshots/phase4/hawebvnet_subnets_priv_pub.png" alt="VNet Subnets Private and Public" width="700">
 
 ---
 
@@ -100,17 +130,22 @@ Configured an Azure NAT Gateway and associated it with private subnets to enable
 Deployed and configured MySQL on database backend instances, established internal database connectivity, and tested queries from the web servers.
 
 * **Database Connectivity Verification:**
-  ![DB Connectivity](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase5/haweb-db-connectivity.png)
+  <img src="screenshots/phase5/haweb-db-connectivity.png" alt="DB Connectivity" width="700">
+
 * **MySQL Install Output (vm-db-01):**
-  ![MySQL Install Output](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase5/haweb_mysql_install_output_vm-db-01.png)
+  <img src="screenshots/phase5/haweb_mysql_install_output_vm-db-01.png" alt="MySQL Install Output" width="700">
+
 * **MySQL Status (vm-db-01):**
-  ![MySQL Status](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase5/haweb_mysql_status_vm-db-01.png)
+  <img src="screenshots/phase5/haweb_mysql_status_vm-db-01.png" alt="MySQL Status" width="700">
+
 * **MySQL Monitor Prompt from vm-web-01:**
-  ![MySQL Monitor Prompt VM Web 01](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase5/haweb_MySQL%20monitor%20prompt%20from%20vm-web-01.png)
+  <img src="screenshots/phase5/haweb_MySQL monitor prompt from vm-web-01.png" alt="MySQL Monitor Prompt VM Web 01" width="700">
+
 * **MySQL Monitor Prompt from vm-web-02:**
-  ![MySQL Monitor Prompt VM Web 02](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase5/haweb_MySQL%20monitor%20prompt%20from%20vm-web-02.png)
+  <img src="screenshots/phase5/haweb_MySQL monitor prompt from vm-web-02.png" alt="MySQL Monitor Prompt VM Web 02" width="700">
+
 * **Database VMs (vm-db-01 and db-02):**
-  ![VM DB 01 and DB 02](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase5/haweb_vm-db-01_and_db-02.png)
+  <img src="screenshots/phase5/haweb_vm-db-01_and_db-02.png" alt="VM DB 01 and DB 02" width="700">
 
 ---
 
@@ -118,23 +153,31 @@ Deployed and configured MySQL on database backend instances, established interna
 Set up a Log Analytics Workspace, configured alert rules for the load balancer and virtual machines, simulated a CPU load spike, and validated notification email delivery.
 
 * **Log Analytics Workspace:**
-  ![Log Analytics Workspace](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase6/haweb-log-analytics-workspace.png)
+  <img src="screenshots/phase6/haweb-log-analytics-workspace.png" alt="Log Analytics Workspace" width="700">
+
 * **Load Balancer Alert Overview:**
-  ![LB Alert Overview](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase6/haweb-lb-alert-overview.png)
+  <img src="screenshots/phase6/haweb-lb-alert-overview.png" alt="LB Alert Overview" width="700">
+
 * **VM Web 01 Alerts:**
-  ![VM Web 01 Alerts](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase6/haweb-vm-web-01-alerts.png)
+  <img src="screenshots/phase6/haweb-vm-web-01-alerts.png" alt="VM Web 01 Alerts" width="700">
+
 * **VM Web 02 Alerts:**
-  ![VM Web 02 Alerts](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase6/haweb-vm-web-02-alerts.png)
+  <img src="screenshots/phase6/haweb-vm-web-02-alerts.png" alt="VM Web 02 Alerts" width="700">
+
 * **VM DB 01 Alerts:**
-  ![VM DB 01 Alerts](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase6/haweb-vm-db-01-alerts.png)
+  <img src="screenshots/phase6/haweb-vm-db-01-alerts.png" alt="VM DB 01 Alerts" width="700">
+
 * **CPU Spike Simulation:**
-  ![CPU Spike](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase6/haweb-cpu-spike.png)
+  <img src="screenshots/phase6/haweb-cpu-spike.png" alt="CPU Spike" width="700">
+
 * **Alert Email Notification 1:**
-  ![Alert Email 1](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase6/haweb-alert-email_1.png)
+  <img src="screenshots/phase6/haweb-alert-email_1.png" alt="Alert Email 1" width="700">
+
 * **Alert Email Notification 2:**
-  ![Alert Email 2](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase6/haweb-alert-email_2.png)
+  <img src="screenshots/phase6/haweb-alert-email_2.png" alt="Alert Email 2" width="700">
+
 * **Alert Email Notification 3:**
-  ![Alert Email 3](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase6/haweb-alert-email_3.png)
+  <img src="screenshots/phase6/haweb-alert-email_3.png" alt="Alert Email 3" width="700">
 
 ---
 
@@ -142,19 +185,25 @@ Set up a Log Analytics Workspace, configured alert rules for the load balancer a
 Performed local `curl` tests against individual web nodes, validated browser response successes, and conducted load balancer failover tests to ensure high availability.
 
 * **Browser Success Verification:**
-  ![Browser Success](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase7/haweb_browser_success.png)
+  <img src="screenshots/phase7/haweb_browser_success.png" alt="Browser Success" width="700">
+
 * **Curl Localhost (vm-web-01):**
-  ![Curl Localhost VM Web 01](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase7/haweb_curl_localhost_vm-web-01.png)
+  <img src="screenshots/phase7/haweb_curl_localhost_vm-web-01.png" alt="Curl Localhost VM Web 01" width="700">
+
 * **Curl Localhost (vm-web-02):**
-  ![Curl Localhost VM Web 02](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase7/haweb_curl_localhost_vm-web-02.png)
+  <img src="screenshots/phase7/haweb_curl_localhost_vm-web-02.png" alt="Curl Localhost VM Web 02" width="700">
+
 * **VM Web 01 Localhost Success:**
-  ![VM Web 01 Localhost Success](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase7/haweb_vm-web-01-localhost-success.png)
+  <img src="screenshots/phase7/haweb_vm-web-01-localhost-success.png" alt="VM Web 01 Localhost Success" width="700">
+
 * **VM Web 02 Localhost Success:**
-  ![VM Web 02 Localhost Success](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase7/haweb_vm-web-02-localhost-success.png)
+  <img src="screenshots/phase7/haweb_vm-web-02-localhost-success.png" alt="VM Web 02 Localhost Success" width="700">
+
 * **Load Balancer Connectivity Test:**
-  ![LB Connectivity](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase7/haweb-lb-connectivity.png)
+  <img src="screenshots/phase7/haweb-lb-connectivity.png" alt="LB Connectivity" width="700">
+
 * **Load Balancer Failover Test:**
-  ![LB Failover Test](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase7/haweb-lb-failover-test.png)
+  <img src="screenshots/phase7/haweb-lb-failover-test.png" alt="LB Failover Test" width="700">
 
 ---
 
@@ -162,12 +211,16 @@ Performed local `curl` tests against individual web nodes, validated browser res
 Conducted final end-to-end testing of the deployed web application through the load balancer, verifying multi-node response handling and stable application behavior.
 
 * **Load Balancer Curl (Phase 8):**
-  ![LB Curl Phase 8](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase8/haweb-lb-curl_phs8.png)
+  <img src="screenshots/phase8/haweb-lb-curl_phs8.png" alt="LB Curl Phase 8" width="700">
+
 * **Load Balancer Connectivity (Phase 8 - 1):**
-  ![LB Connectivity Phase 8 1](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase8/haweb-lb-connectivity_phs8_1.png)
+  <img src="screenshots/phase8/haweb-lb-connectivity_phs8_1.png" alt="LB Connectivity Phase 8 1" width="700">
+
 * **Load Balancer Connectivity (Phase 8 - 2):**
-  ![LB Connectivity Phase 8 2](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase8/haweb-lb-connectivity_phs8_2.png)
+  <img src="screenshots/phase8/haweb-lb-connectivity_phs8_2.png" alt="LB Connectivity Phase 8 2" width="700">
+
 * **VM Web 01 Application View (Phase 8):**
-  ![VM Web 01 App Phase 8](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase8/haweb-vm-web-01-app_phs8.png)
+  <img src="screenshots/phase8/haweb-vm-web-01-app_phs8.png" alt="VM Web 01 App Phase 8" width="700">
+
 * **VM Web 02 Application View (Phase 8):**
-  ![VM Web 02 App Phase 8](https://raw.githubusercontent.com/maxmagnac/ha-web-infrastructure-azure/main/screenshots/phase8/haweb-vm-web-02-app_phs8.png)
+  <img src="screenshots/phase8/haweb-vm-web-02-app_phs8.png" alt="VM Web 02 App Phase 8" width="700">
