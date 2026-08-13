@@ -1,5 +1,3 @@
-Here's your full updated README with every screenshot embedded as a live image! 🔥
-
 ``markdown
 🏗️ High Availability Web Infrastructure on Azure
 
