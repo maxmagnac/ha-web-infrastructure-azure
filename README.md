@@ -3,12 +3,6 @@ Here's your full updated README with every screenshot embedded as a live image! 
 ``markdown
 🏗️ High Availability Web Infrastructure on Azure
 
-Azure (https://img.shields.io/badge/Cloud-Microsoft%20Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-Ubuntu (https://img.shields.io/badge/OS-Ubuntu%2022.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-MySQL (https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-PHP (https://img.shields.io/badge/App-PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-Status (https://img.shields.io/badge/Status-Complete-success?style=for-the-badge)
-
 Author: Maurrin Carter
 GitHub: @maxmagnac (https://github.com/maxmagnac)
 Platform: Microsoft Azure
