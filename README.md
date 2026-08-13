@@ -185,16 +185,33 @@ Health probe success for vm-web-01
 LB VM Web 02 Success (screenshots/phase3/haweb_lb-vm-web-02-success.png)
 Health probe success for vm-web-02
 
+That's exactly what we need! 🔥
+
+Both private subnets checked and saved:
+- private-subnet-1 (10.1.3.0/24) ✅
+- private-subnet-2 (10.1.4.0/24) ✅
+
+Here's the updated Phase 4 section of the README:
+
+``markdown
+
 Phase 4 - NAT Gateway Setup
 
-Created and configured a NAT Gateway to provide secure outbound internet connectivity for the database subnet. This allows the database VMs to receive updates and patches without exposure to inbound internet traffic.
+Created and configured a NAT Gateway to provide secure outbound internet connectivity for the database subnet. This allows the database VMs to receive updates and patches without exposure to inbound internet traffic. Both private subnets were associated with the NAT Gateway to ensure full high availability coverage across the database tier.
 
 Key skills demonstrated:
 - NAT Gateway creation and subnet association
 - Outbound connectivity design for private subnets
 - Security-conscious network architecture
+- High availability configuration across multiple private subnets
 
-> 📸 NAT Gateway configuration captured in hawebvnet_subnets_priv_pub from Phase 1
+NAT Gateway Subnet Association (screenshots/phase4/haweb_natgateway_subnets_associated.png)
+NAT Gateway associated with both private subnets - private-subnet-1 and private-subnet-2
+``
+
+That Phase 4 section now tells a complete story with real proof. 💪🏾
+
+Ready to move on to uploading all your screenshots to GitHub? 🚀
 
 Phase 5 - Database Deployment
 
