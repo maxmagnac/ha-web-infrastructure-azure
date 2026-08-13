@@ -1,13 +1,9 @@
-# ha-web-infrastructure-azure
-High Availability Web Infrastructure on Azure - Hands-On Cloud Engineering Project
-
-Let's build it! 🔥 Here's your full GitHub README in Markdown:
+Here's your full updated README with every screenshot embedded as a live image! 🔥
 
 ``markdown
 🏗️ High Availability Web Infrastructure on Azure
 
 Azure (https://img.shields.io/badge/Cloud-Microsoft%20Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-Terraform (https://img.shields.io/badge/IaC-Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 Ubuntu (https://img.shields.io/badge/OS-Ubuntu%2022.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 MySQL (https://img.shields.io/badge/Database-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 PHP (https://img.shields.io/badge/App-PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
@@ -24,42 +20,41 @@ This project demonstrates hands-on cloud engineering skills through the full dep
 
 This project serves as a portfolio piece showcasing real-world cloud architecture skills for a cloud engineering career.
 
-*Full infrastructure resource group showing all deployed Azure resources*
- haweb_infr_rg
-
+Infrastructure Resource Group (screenshots/haweb_infr_rg.png)
+Full infrastructure resource group showing all deployed Azure resources
 
 🏛️ Architecture Summary
 
 `
- ┌─────────────────────────────────────┐
- │ Microsoft Azure │
- │ │
- │ ┌──────────────────────────────┐ │
- │ │ Virtual Network │ │
- │ │ │ │
- │ │ ┌─────────┐ ┌─────────┐ │ │
- Internet ─────────▶ │vm-web-01│ │vm-web-02│ │ │
- │ │ └────┬────┘ └────┬────┘ │ │
- │ │ │ │ │ │
- │ │ ┌────▼─────────────▼────┐ │ │
- │ │ │ Azure Load Balancer │ │ │
- │ │ │ ha-web-lb │ │ │
- │ │ └────────────────────────┘ │ │
- │ │ │ │
- │ │ ┌─────────────────────────┐ │ │
- │ │ │ Private Subnet │ │ │
- │ │ │ ┌──────────────────┐ │ │ │
- │ │ │ │ vm-db-01 │ │ │ │
- │ │ │ │ MySQL Database │ │ │ │
- │ │ │ └──────────────────┘ │ │ │
- │ │ │ NAT Gateway │ │ │
- │ │ └─────────────────────────┘ │ │
- │ └──────────────────────────────┘ │
- │ │
- │ ┌──────────────────────────────┐ │
- │ │ Azure Monitor + Log Analytics│ │
- │ └──────────────────────────────┘ │
- └─────────────────────────────────────┘
+┌─────────────────────────────────────────┐
+│ Microsoft Azure │
+│ │
+│ ┌──────────────────────────────────┐ │
+│ │ Virtual Network │ │
+│ │ │ │
+│ │ ┌───────────┐ ┌───────────┐ │ │
+│ │ │ vm-web-01 │ │ vm-web-02 │ │ │
+│ │ └─────┬─────┘ └─────┬─────┘ │ │
+│ │ │ │ │ │
+│ │ ┌─────▼──────────────▼──────┐ │ │
+│ │ │ Azure Load Balancer │ │ │
+│ │ │ ha-web-lb │ │ │
+│ │ └───────────────────────────┘ │ │
+│ │ │ │
+│ │ ┌───────────────────────────┐ │ │
+│ │ │ Private Subnet │ │ │
+│ │ │ ┌─────────┐ ┌─────────┐ │ │ │
+│ │ │ │vm-db-01 │ │vm-db-02 │ │ │ │
+│ │ │ │ MySQL │ │ MySQL │ │ │ │
+│ │ │ └─────────┘ └─────────┘ │ │ │
+│ │ │ NAT Gateway │ │ │
+│ │ └───────────────────────────┘ │ │
+│ └──────────────────────────────────┘ │
+│ │
+│ ┌──────────────────────────────────┐ │
+│ │ Azure Monitor + Log Analytics │ │
+│ └──────────────────────────────────┘ │
+└─────────────────────────────────────────┘
 `
 
 Infrastructure Components
@@ -69,7 +64,8 @@ Infrastructure Components
 | Virtual Network | ha-web-vnet | Segmented public/private subnets |
 | Web Server 1 | vm-web-01 | Ubuntu 22.04 LTS - Apache/PHP |
 | Web Server 2 | vm-web-02 | Ubuntu 22.04 LTS - Apache/PHP |
-| Database Server | vm-db-01 | Ubuntu 22.04 LTS - MySQL |
+| Database Server 1 | vm-db-01 | Ubuntu 22.04 LTS - MySQL |
+| Database Server 2 | vm-db-02 | Ubuntu 22.04 LTS - MySQL |
 | Load Balancer | ha-web-lb | Public frontend - round-robin |
 | NAT Gateway | ha-web-nat-gateway | Secure outbound for private subnet |
 | Monitoring | ha-web-logs | Log Analytics + Azure Monitor alerts |
@@ -85,21 +81,30 @@ Key skills demonstrated:
 - Subnet segmentation for multi-tier architecture
 - Network Security Group configuration
 
-Screenshots:
+VNet Overview (screenshots/phase1/hawebvnet_overview.png)
+Virtual Network overview showing VNet configuration
 
-| Screenshot | Description |
-|------------|-------------|
-| hawebvnet_overview | Virtual Network overview showing VNet configuration |
-| hawebvnet_subnets_priv_pub | VNet subnets showing public and private subnet setup |
-| hawebNSGs | Network Security Groups overview |
-| hawebNSGs_public-nsg inbound rules | Public NSG inbound rules configuration |
-| haweb_public-nsg subnets | Public NSG subnet associations |
-| haweb_private-nsg inbound rules | Private NSG inbound rules configuration |
-| haweb_private-nsg subnets | Private NSG subnet associations |
+VNet Subnets (screenshots/phase1/hawebvnet_subnets_priv_pub.png)
+VNet subnets showing public and private subnet setup
+
+NSGs Overview (screenshots/phase1/hawebNSGs.png)
+Network Security Groups overview
+
+Public NSG Inbound Rules (screenshots/phase1/hawebNSGs_public-nsg_inbound_rules.png)
+Public NSG inbound rules configuration
+
+Public NSG Subnets (screenshots/phase1/haweb_public-nsg_subnets.png)
+Public NSG subnet associations
+
+Private NSG Inbound Rules (screenshots/phase1/haweb_private-nsg_inbound_rules.png)
+Private NSG inbound rules configuration
+
+Private NSG Subnets (screenshots/phase1/haweb_private-nsg_subnets.png)
+Private NSG subnet associations
 
 Phase 2 - Virtual Machine Deployment
 
-Deployed two Ubuntu Server 22.04 LTS web server VMs (vm-web-01 and vm-web-02) and one database server VM (vm-db-01). Configured each VM with appropriate network interfaces and placed them in their respective subnets. Installed and configured Nginx on both web servers.
+Deployed two Ubuntu Server 22.04 LTS web server VMs (vm-web-01 and vm-web-02) and two database server VMs (vm-db-01 and vm-db-02). Configured each VM with appropriate network interfaces and placed them in their respective subnets. Installed and configured Nginx on both web servers.
 
 Key skills demonstrated:
 - Virtual Machine provisioning on Azure
@@ -107,24 +112,53 @@ Key skills demonstrated:
 - Multi-tier VM placement across subnets
 - Web server installation and status verification
 
-Screenshots:
+Both Web VMs (screenshots/phase2/haweb_vm1_and_vm2.png)
+Overview of both web server VMs
 
-| Screenshot | Description |
-|------------|-------------|
-| haweb_vm1 and vm2 | Overview of both web server VMs |
-| haweb_vm1_settings1 | vm-web-01 settings - Part 1 |
-| haweb_vm1_settings2 | vm-web-01 settings - Part 2 |
-| haweb_vm2_settings1 | vm-web-02 settings - Part 1 |
-| haweb_vm2_settings2 | vm-web-02 settings - Part 2 |
-| haweb_vm-db-01 | Database server VM overview |
-| haweb_vm-db-01_settings1 | vm-db-01 settings - Part 1 |
-| haweb_vm-db-01_settings2 | vm-db-01 settings - Part 2 |
-| haweb_Nginx install_output_vm-web-01 | Nginx installation output on vm-web-01 |
-| haweb_Nginx_install_output_vm-web-02 | Nginx installation output on vm-web-02 |
-| haweb_Nginx_status_vm-web-01 | Nginx service status running on vm-web-01 |
-| haweb_Nginx_status_vm-web-02 | Nginx service status running on vm-web-02 |
-| haweb_Both VMs overview | Both web VMs running and confirmed |
-| haweb_Both VMs_responding_test | Both web VMs responding to connectivity test |
+VM Web 01 Settings 1 (screenshots/phase2/haweb_vm1_settings1.png)
+vm-web-01 settings - Part 1
+
+VM Web 01 Settings 2 (screenshots/phase2/haweb_vm1_settings2.png)
+vm-web-01 settings - Part 2
+
+VM Web 02 Settings 1 (screenshots/phase2/haweb_vm2_settings1.png)
+vm-web-02 settings - Part 1
+
+VM Web 02 Settings 2 (screenshots/phase2/haweb_vm2_settings2.png)
+vm-web-02 settings - Part 2
+
+VM DB 01 (screenshots/phase2/haweb_vm-db-01.png)
+Database server vm-db-01 overview
+
+VM DB 01 Settings 1 (screenshots/phase2/haweb_vm-db-01_settings1.png)
+vm-db-01 settings - Part 1
+
+VM DB 01 Settings 2 (screenshots/phase2/haweb_vm-db-01_settings2.png)
+vm-db-01 settings - Part 2
+
+VM DB 02 Settings 1 (screenshots/phase2/haweb_vm-db-02_settings1.png)
+vm-db-02 settings - Part 1
+
+VM DB 02 Settings 2 (screenshots/phase2/haweb_vm-db-02_settings2.png)
+vm-db-02 settings - Part 2
+
+Nginx Install VM Web 01 (screenshots/phase2/haweb_Nginx_install_output_vm-web-01.png)
+Nginx installation output on vm-web-01
+
+Nginx Install VM Web 02 (screenshots/phase2/haweb_Nginx_install_output_vm-web-02.png)
+Nginx installation output on vm-web-02
+
+Nginx Status VM Web 01 (screenshots/phase2/haweb_Nginx_status_vm-web-01.png)
+Nginx service status running on vm-web-01
+
+Nginx Status VM Web 02 (screenshots/phase2/haweb_Nginx_status_vm-web-02.png)
+Nginx service status running on vm-web-02
+
+Both VMs Overview (screenshots/phase2/haweb_Both_VMs_overview.png)
+Both web VMs running and confirmed
+
+Both VMs Responding (screenshots/phase2/haweb_Both_VMs_responding_test.png)
+Both web VMs responding to connectivity test
 
 Phase 3 - Load Balancer Configuration
 
@@ -136,21 +170,30 @@ Key skills demonstrated:
 - Health probe setup and load balancing rules
 - Load balancer validation and testing
 
-Screenshots:
+LB Deploy Success (screenshots/phase3/haweb_lb_deploysuccess.png)
+Load balancer deployment success confirmation
 
-| Screenshot | Description |
-|------------|-------------|
-| haweb_lb_deploysuccess | Load balancer deployment success confirmation |
-| haweb_lb_overview | Load balancer overview and configuration |
-| haweb_lb_settings1 | Load balancer settings - Part 1 |
-| haweb_lb_settings2 | Load balancer settings - Part 2 |
-| haweb_lb_vm_health | Load balancer VM health probe status |
-| haweb_lb-vm-web-01-success | Health probe success for vm-web-01 |
-| haweb_lb-vm-web-02-success | Health probe success for vm-web-02 |
+LB Overview (screenshots/phase3/haweb_lb_overview.png)
+Load balancer overview and configuration
+
+LB Settings 1 (screenshots/phase3/haweb_lb_settings1.png)
+Load balancer settings - Part 1
+
+LB Settings 2 (screenshots/phase3/haweb_lb_settings2.png)
+Load balancer settings - Part 2
+
+LB VM Health (screenshots/phase3/haweb_lb_vm_health.png)
+Load balancer VM health probe status
+
+LB VM Web 01 Success (screenshots/phase3/haweb_lb-vm-web-01-success.png)
+Health probe success for vm-web-01
+
+LB VM Web 02 Success (screenshots/phase3/haweb_lb-vm-web-02-success.png)
+Health probe success for vm-web-02
 
 Phase 4 - NAT Gateway Setup
 
-Created and configured a NAT Gateway to provide secure outbound internet connectivity for the database subnet. This allows the database VM to receive updates and patches without exposure to inbound internet traffic.
+Created and configured a NAT Gateway to provide secure outbound internet connectivity for the database subnet. This allows the database VMs to receive updates and patches without exposure to inbound internet traffic.
 
 Key skills demonstrated:
 - NAT Gateway creation and subnet association
@@ -161,7 +204,7 @@ Key skills demonstrated:
 
 Phase 5 - Database Deployment
 
-Installed and configured MySQL on vm-db-01. Created a dedicated application database (haweb_db) and a scoped database user (haweb_user) with access limited to the application database only. Validated database connectivity from both web servers.
+Installed and configured MySQL on both vm-db-01 and vm-db-02. Created a dedicated application database (haweb_db) and a scoped database user (haweb_user) with access limited to the application database only. Validated database connectivity from both web servers.
 
 Key skills demonstrated:
 - MySQL installation and configuration on Linux
@@ -169,20 +212,27 @@ Key skills demonstrated:
 - Private network database access configuration
 - Cross-tier connectivity validation
 
-Screenshots:
+MySQL Install Output (screenshots/phase5/haweb_mysql_install_output_vm-db-01.png)
+MySQL installation output on vm-db-01
 
-| Screenshot | Description |
-|------------|-------------|
-| haweb_mysql_install_output_vm-db-01 | MySQL installation output on vm-db-01 |
-| haweb_mysql_status_vm-db-01 | MySQL service status running on vm-db-01 |
-| haweb_MySQL monitor prompt from vm-web-01 | MySQL connection prompt accessed from vm-web-01 |
-| haweb_MySQL monitor prompt from vm-web-02 | MySQL connection prompt accessed from vm-web-02 |
-| haweb-db-connectivity | Database connectivity validation confirmation |
-| haweb_vm-db-01_and_db-02 | Database VM infrastructure overview |
+MySQL Status (screenshots/phase5/haweb_mysql_status_vm-db-01.png)
+MySQL service status running on vm-db-01
+
+MySQL Monitor VM Web 01 (screenshots/phase5/haweb_MySQL_monitor_prompt_from_vm-web-01.png)
+MySQL connection prompt accessed from vm-web-01
+
+MySQL Monitor VM Web 02 (screenshots/phase5/haweb_MySQL_monitor_prompt_from_vm-web-02.png)
+MySQL connection prompt accessed from vm-web-02
+
+DB Connectivity (screenshots/phase5/haweb-db-connectivity.png)
+Database connectivity validation confirmation
+
+DB 01 and DB 02 (screenshots/phase5/haweb_vm-db-01_and_db-02.png)
+Both database VMs overview
 
 Phase 6 - Monitoring and Alerts
 
-Created a Log Analytics Workspace (ha-web-logs) and connected it to the infrastructure. Configured Azure Monitor with custom alert rules across all three VMs. Validated alerts by triggering a CPU spike and confirming email delivery.
+Created a Log Analytics Workspace (ha-web-logs) and connected it to the infrastructure. Configured Azure Monitor with custom alert rules across all VMs. Validated alerts by triggering a CPU spike and confirming email delivery.
 
 Key skills demonstrated:
 - Log Analytics Workspace creation
@@ -190,19 +240,32 @@ Key skills demonstrated:
 - Custom alert rule setup per VM
 - Alert validation through CPU spike testing
 
-Screenshots:
+Log Analytics Workspace (screenshots/phase6/haweb-log-analytics-workspace.png)
+Log Analytics Workspace creation and overview
 
-| Screenshot | Description |
-|------------|-------------|
-| haweb-log-analytics-workspace | Log Analytics Workspace creation and overview |
-| haweb-lb-alert-overview | Azure Monitor alert rules overview |
-| haweb-vm-web-01-alerts | Alert rules configured for vm-web-01 |
-| haweb-vm-web-02-alerts | Alert rules configured for vm-web-02 |
-| haweb-vm-db-01-alerts | Alert rules configured for vm-db-01 |
-| haweb-cpu-spike | CPU spike triggered for alert validation |
-| haweb-alert-email_1 | Alert email notification received - Part 1 |
-| haweb-alert-email_2 | Alert email notification received - Part 2 |
-| haweb-alert-email_3 | Alert email notification received - Part 3 |
+Alert Overview (screenshots/phase6/haweb-lb-alert-overview.png)
+Azure Monitor alert rules overview
+
+VM Web 01 Alerts (screenshots/phase6/haweb-vm-web-01-alerts.png)
+Alert rules configured for vm-web-01
+
+VM Web 02 Alerts (screenshots/phase6/haweb-vm-web-02-alerts.png)
+Alert rules configured for vm-web-02
+
+VM DB 01 Alerts (screenshots/phase6/haweb-vm-db-01-alerts.png)
+Alert rules configured for vm-db-01
+
+CPU Spike (screenshots/phase6/haweb-cpu-spike.png)
+CPU spike triggered for alert validation
+
+Alert Email 1 (screenshots/phase6/haweb-alert-email_1.png)
+Alert email notification received - Part 1
+
+Alert Email 2 (screenshots/phase6/haweb-alert-email_2.png)
+Alert email notification received - Part 2
+
+Alert Email 3 (screenshots/phase6/haweb-alert-email_3.png)
+Alert email notification received - Part 3
 
 Phase 7 - Testing and Validation
 
@@ -214,17 +277,26 @@ Key skills demonstrated:
 - Load balancer failover testing
 - Full stack validation through public IP
 
-Screenshots:
+VM Web 01 Localhost Success (screenshots/phase7/haweb_vm-web-01-localhost-success.png)
+Localhost connectivity success on vm-web-01
 
-| Screenshot | Description |
-|------------|-------------|
-| haweb_vm-web-01-localhost-success | Localhost connectivity success on vm-web-01 |
-| haweb_vm-web-02-localhost-success | Localhost connectivity success on vm-web-02 |
-| haweb_curl_localhost_vm-web-01 | curl localhost output on vm-web-01 |
-| haweb_curl_localhost_vm-web-02 | curl localhost output on vm-web-02 |
-| haweb-lb-failover-test | Load balancer failover test result |
-| haweb-lb-connectivity | Load balancer public IP connectivity confirmed |
-| haweb_browser_success | Browser successfully serving app through load balancer |
+VM Web 02 Localhost Success (screenshots/phase7/haweb_vm-web-02-localhost-success.png)
+Localhost connectivity success on vm-web-02
+
+Curl Localhost VM Web 01 (screenshots/phase7/haweb_curl_localhost_vm-web-01.png)
+curl localhost output on vm-web-01
+
+Curl Localhost VM Web 02 (screenshots/phase7/haweb_curl_localhost_vm-web-02.png)
+curl localhost output on vm-web-02
+
+LB Failover Test (screenshots/phase7/haweb-lb-failover-test.png)
+Load balancer failover test result
+
+LB Connectivity (screenshots/phase7/haweb-lb-connectivity.png)
+Load balancer public IP connectivity confirmed
+
+Browser Success (screenshots/phase7/haweb_browser_success.png)
+Browser successfully serving app through load balancer
 
 Phase 8 - Web Application Deployment
 
@@ -236,22 +308,27 @@ Key skills demonstrated:
 - End-to-end load balancer validation with live traffic
 - Round-robin traffic distribution confirmation
 
-Screenshots:
+VM Web 01 App (screenshots/phase8/haweb-vm-web-01-app_phs8.png)
+curl output confirming PHP app and DB connection on vm-web-01
 
-| Screenshot | Description |
-|------------|-------------|
-| haweb-vm-web-01-app_phs8 | curl output confirming PHP app and DB connection on vm-web-01 |
-| haweb-vm-web-02-app_phs8 | curl output confirming PHP app and DB connection on vm-web-02 |
-| haweb-lb-connectivity_phs8_1 | Browser showing load balancer serving PHP app - vm-web-01 |
-| haweb-lb-connectivity_phs8_2 | Browser showing load balancer serving PHP app - vm-web-02 |
-| haweb-lb-curl_phs8 | Terminal showing round-robin curl output switching between both servers |
+VM Web 02 App (screenshots/phase8/haweb-vm-web-02-app_phs8.png)
+curl output confirming PHP app and DB connection on vm-web-02
+
+LB Connectivity Phase 8 - 1 (screenshots/phase8/haweb-lb-connectivity_phs8_1.png)
+Browser showing load balancer serving PHP app - vm-web-01
+
+LB Connectivity Phase 8 - 2 (screenshots/phase8/haweb-lb-connectivity_phs8_2.png)
+Browser showing load balancer serving PHP app - vm-web-02
+
+LB Curl Phase 8 (screenshots/phase8/haweb-lb-curl_phs8.png)
+Terminal showing round-robin curl output switching between both servers
 
 ✅ Validation Results
 
 | Test | Result |
 |------|--------|
 | VNet and subnet configuration | ✅ SUCCESS |
-| VM deployment - all three VMs | ✅ SUCCESS |
+| VM deployment - all four VMs | ✅ SUCCESS |
 | Nginx running on both web servers | ✅ SUCCESS |
 | Load balancer deployment and health probes | ✅ SUCCESS |
 | MySQL installation and configuration | ✅ SUCCESS |
@@ -286,15 +363,16 @@ This project demonstrates the ability to design and deploy a multi-tier, high av
 `
 ha-web-infrastructure-azure/
 ├── README.md
-├── screenshots/
-│ ├── phase1/
-│ ├── phase2/
-│ ├── phase3/
-│ ├── phase4/
-│ ├── phase5/
-│ ├── phase6/
-│ ├── phase7/
-│ └── phase8/
+└── screenshots/
+    ├── haweb_infr_rg.png
+    ├── phase1/
+    ├── phase2/
+    ├── phase3/
+    ├── phase4/
+    ├── phase5/
+    ├── phase6/
+    ├── phase7/
+    └── phase8/
 `
 
 Built by Maurrin Carter | @maxmagnac (https://github.com/maxmagnac) | Microsoft Azure | 2026
