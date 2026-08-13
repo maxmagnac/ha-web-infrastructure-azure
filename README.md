@@ -25,6 +25,7 @@ This project demonstrates hands-on cloud engineering skills through the full dep
 This project serves as a portfolio piece showcasing real-world cloud architecture skills for a cloud engineering career.
 
 *Full infrastructure resource group showing all deployed Azure resources*
+ haweb_infr_rg
 
 
 🏛️ Architecture Summary
